@@ -1,0 +1,19 @@
+file = open("numbers.txt","a")
+
+num1 = int(input('Enter a number: '))
+file.write("\n")
+file.write(str(num1))
+
+file.close
+
+###############################################
+
+file = open("numbers.txt","r")
+
+line = file.read()
+line.split("\n")
+
+total = sum(int(num) for num in line.split('\n'))
+print(total)
+
+file.close
